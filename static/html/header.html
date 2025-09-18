@@ -1,0 +1,174 @@
+<style>
+/* Header Container Styles */
+.header-container {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* Main Dashboard Header */
+.dashboard-header {
+    background: linear-gradient(135deg, #f5f6f7 0%, #e8eaed 100%);
+    border: 1px solid #c4c7c5;
+    border-radius: 12px;
+    text-align: center;
+    padding: 2rem;
+    margin: 0.5rem auto;
+    width: calc(100% - 1rem);
+    max-width: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    color: #3c4043;
+    font-family: system-ui, -apple-system, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    color: #3c4043;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Subtitle */
+.dashboard-subtitle {
+    color: #5f6368;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0 0 1.5rem 0;
+    font-style: italic;
+}
+
+/* Data Summary Container */
+.data-summary {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem auto 0 auto;
+    max-width: 1200px;
+    text-align: left;
+}
+
+/* Summary Title */
+.summary-title {
+    color: #4285f4;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+/* Summary Grid Layout */
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Summary Section Headers */
+.summary-section h4 {
+    color: #5f6368;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    border-bottom: 1px solid #dadce0;
+    padding-bottom: 0.3rem;
+}
+
+/* Summary Section Lists */
+.summary-section ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #3c4043;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Summary Section List Items */
+.summary-section li {
+    margin-bottom: 0.3rem;
+}
+
+/* Dataset Information Box */
+.dataset-info {
+    background: rgba(66, 133, 244, 0.05);
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #3c4043;
+    font-size: 0.9rem;
+}
+
+/* Dataset Information Strong Text */
+.dataset-info strong {
+    color: #4285f4;
+}
+</style>
+
+<div class="header-container">
+    <div class="dashboard-header">
+        <h1 class="dashboard-title">Meteorite Landings Dashboard</h1>
+        <p class="dashboard-subtitle">Interactive Analysis of Meteorite Discoveries Across Time and Geography</p>
+        
+        <div class="data-summary">
+            <h3 class="summary-title">Dataset Overview</h3>
+            
+            <div class="summary-grid">
+                <div class="summary-section">
+                    <h4>Data Characteristics</h4>
+                    <ul>
+                        <li><strong>Total Records:</strong> 45,716 meteorite landings</li>
+                        <li><strong>Geographic Coverage:</strong> Global coordinates</li>
+                        <li><strong>Time Period:</strong> 860 CE - 2025 CE</li>
+                        <li><strong>Mass Range:</strong> 0.01g - 60,000kg</li>
+                    </ul>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>Key Variables</h4>
+                    <ul>
+                        <li><strong>Classification:</strong> 450+ meteorite types</li>
+                        <li><strong>Discovery Type:</strong> Fell vs Found</li>
+                        <li><strong>Mass Distribution:</strong> Highly right-skewed</li>
+                        <li><strong>Temporal Patterns:</strong> Exponential recent growth</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="summary-grid">
+                <div class="summary-section">
+                    <h4>Three Time Periods</h4>
+                    <ul>
+                        <li><strong>Period 1 (≤1752):</strong> Historical discoveries</li>
+                        <li><strong>Period 2 (1753-1973):</strong> Scientific era</li>
+                        <li><strong>Period 3 (≥1974):</strong> Modern systematic searches</li>
+                    </ul>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>Key Insights</h4>
+                    <ul>
+                        <li>Most meteorites are <strong>ordinary chondrites</strong></li>
+                        <li><strong>Antarctica</strong> is a major discovery hotspot</li>
+                        <li>Recent decades show <strong>exponential growth</strong></li>
+                        <li>Technology revolutionized <strong>detection methods</strong></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="dataset-info">
+                <strong>Data Source:</strong> Meteorite Landings dataset from NASA's Open Data Portal
+                <br>
+                <strong>Processing:</strong> Cleaned, filtered, and categorized for interactive visualization
+            </div>
+        </div>
+    </div>
+</div>
