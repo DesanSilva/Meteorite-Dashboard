@@ -109,7 +109,7 @@ venv\Scripts\activate
 
 #### Step 3: Install dependencies
 ```bash
-pip install -r requireents.txt
+pip install -r requirements.txt
 ```
 
 #### Step 4: Run Application
