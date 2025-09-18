@@ -6,7 +6,7 @@ from src.plot_template import (
 
 def create_plot():
     # Create map
-    plot, source, df = create_map('data/geo_data1.csv', 'Meteorite Landings (Year >= 1974)', 'viridis')
+    plot, source, df = create_map('data/sample1.csv', 'Meteorite Landings (Year >= 1974)', 'viridis')
     
     # Create controls
     controls = create_controls(df, "Year ≥ 1974")
