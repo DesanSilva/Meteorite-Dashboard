@@ -3,9 +3,9 @@ from bokeh.models import Div
 from bokeh.plotting import curdoc
 from bokeh.themes import Theme
 
-from src.plot1974 import create_plot as create_plot1
-from src.plot1752 import create_plot as create_plot2
-from src.plot860 import create_plot as create_plot3
+from src.plot1 import create_plot as create_plot1
+from src.plot2 import create_plot as create_plot2
+from src.plot3 import create_plot as create_plot3
 from src.utils import load_html_code
 
 # custom dark theme optimized for meteorite dashboard
