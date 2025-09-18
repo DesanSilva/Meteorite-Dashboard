@@ -87,8 +87,32 @@ Origin: NASA's Jet Propulsion Laboratory and is maintained as part of NASA's Ope
 
 ## Usage
 
-To run the application:
+To run the application locally, run the following commands in order on the command line:
 
+#### Step 1: Clone repository
 ```bash
-python -m bokeh serve app.py --show
+git clone https://github.com/DesanSilva/Meteorite-Dashboard.git
+cd Meteorite-Dashboard
+```
+
+#### Step 2: Create virtual environment
+* macOS/Linux:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+* Windows:
+```bash
+python -m venv .venv
+venv\Scripts\activate
+```
+
+#### Step 3: Install dependencies
+```bash
+pip install -r requireents.txt
+```
+
+#### Step 4: Run Application
+```bash
+bokeh serve app.py --address=0.0.0.0 --port=$PORT --allow-websocket-origin=*
 ```
