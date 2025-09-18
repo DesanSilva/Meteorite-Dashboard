@@ -1,14 +1,24 @@
 from bokeh.models import ColumnDataSource
 import pandas as pd
+import geopandas as gpd
 import os
-from .color_utils import create_color_mapper
-from .map_config import create_figure, add_hover_tool, add_color_bar
+from src.color_utils import create_color_mapper
+from src.map_config import create_figure, add_hover_tool, add_color_bar
 
 def create_map(data_path, title, color_scheme='viridis'):
     df = pd.read_csv(data_path)
+    
+    gdf = gpd.GeoDataFrame(
+        df,
+        geometry=gpd.points_from_xy(df['reclong'], df['reclat']),
+        crs='EPSG:4326'  # WGS84 coordinate system
+    )
 
-    df['x'] = df['long_mercator']
-    df['y'] = df['lat_mercator']
+    # Transform to web mercator for web mapping
+    gdf_mercator = gdf.to_crs('EPSG:3857')
+
+    df['x'] = gdf_mercator.geometry.x
+    df['y'] = gdf_mercator.geometry.y
     
     source = ColumnDataSource(df)
     
